@@ -1,0 +1,326 @@
+:root {
+  --TitleParbackground-color: rgb(45,72,99);
+  --ButttonGradiantColor:linear-gradient(144deg,#d79eff, #bbb0ff 50%,#b7faff);
+  --Apartment:white;
+  --FontColor:blue;
+  --ScrollThump:rgba(0,0,0,0.5);
+  --ScrollTrack:rgba(0,0,0,0.3);
+  --IconColor:white;
+  --BodyBackground:white;
+  --effect: hover 1s linear infinite;
+
+  /* --DarkTitleParbackground-color: #001830;
+  --DarkButttonGradiantColor:linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
+}
+body{
+  display: flex;
+  /* justify-content: center; */
+  background-color: var(--BodyBackground);
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center */
+}
+/* document.body.style.flexDirection = "column";
+      // document.body.style.alignItems = "center";
+      // document.body.style.justifyContent= "center"; */
+a.mapboxgl-ctrl-logo{
+  display: none;
+}
+#TitlePar{
+  width: 100%;
+  
+  /* height: 50%; */
+  padding: auto;
+  background-color: var(--TitleParbackground-color);
+  color: white;
+  /* overflow: hidden; */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 98;
+}
+#map{
+  /* height: 100%; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* .mapboxgl-ctrl{
+  display: none !important;
+} */
+
+ #div {
+   position: absolute;
+   /* display: none; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   top: 15%;
+   /*left: 521px; */
+   background: var(--Apartment);
+   width: 0px;
+   height: 0px;
+   border-radius: 15px;
+   /* z-index: 500 !important; */
+   z-index:2;
+    }
+  .mapboxgl-popup {
+    max-width: 200px;
+    }
+
+#addresss,#pricee,#roomss{
+width: 200px;
+/* border: 1px solid; */
+padding: 2px 5px;
+
+/* Both of the following are required for text-overflow */
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+#ApartmentTitlePar{
+  width: 100%;
+  padding-right:42%;
+  background-color: var(--TitleParbackground-color);
+  color: white;
+  /* overflow: hidden; */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 15px 0px 0px;
+}
+#ApartmentBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  
+  /* overflow: scroll; */
+}
+#ApartmentData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+#ApartmentImages{
+  overflow: auto;
+}
+#ApartmentImages::-webkit-scrollbar {
+  width: 12px;
+}
+#ApartmentImages::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--ScrollTrack); 
+  border-radius: 10px;
+}
+#ApartmentImages::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px var(--ScrollThump); 
+}
+#XBTN{
+background-color: transparent;
+color: white;
+font-size: 30px;
+border: 0px;
+width: 40px;
+height: 40px;
+overflow: hidden;
+margin: 5px;
+border-radius: 15px;
+vertical-align: middle;
+}
+#XBTN:hover{
+  background-color: cyan;
+}
+
+      
+/* ====================================================================================== */
+
+#btn {
+  align-items: center;
+  background-image: var(--ButttonGradiantColor);
+  border: 0;
+  border-radius: 100px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  /* box-sizing: border-box; */
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  /* line-height: 1em; */
+  /* max-width: 100%; */
+  /* min-width: 140px; */
+  padding: 19px 24px;
+  text-decoration: none;
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  /* touch-action: manipulation; */
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+#btn:active,
+#btn:hover {
+  /* outline: 0; */
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+/* @media (min-width: 768px) {
+  #btn {
+    font-size: 24px;
+    min-width: 196px;
+  }
+} */
+
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0ms, opacity 300ms;
+}
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0.2s, opacity 300ms;
+}
+
+p,label{
+  color: var(--FontColor);
+}
+fieldset{
+  color: var(--FontColor);;
+  border-color: blue;
+  margin: 20px 20px 0px;
+  padding: 1%;
+}
+legend {
+  font: 15pt/0 'Averia Serif Libre'; 
+  margin-left: 20px; /* to center */
+  padding: 0 4px; 
+}
+#UserName{
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  width: auto;
+}
+
+.fas,.fa{
+color: var(--IconColor);
+}
+
+
+
+
+
+#PreLoader{
+  display: flex;
+  text-align: center;
+  background-size: 15%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+
+
+.p{
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4em;
+  font-family: arial;
+  font-weight: 600;
+  transform: scale(.5);
+  color: #ffffff;
+  -webkit-text-stroke: 2px gray;
+
+
+  /* text-transform: uppercase;
+  text-align: center;
+  transform: scale(.5); */
+  
+}
+
+.p:nth-child(1) {
+  animation: var(--effect);
+}
+
+.p:nth-child(2) {
+  animation: var(--effect) .125s;
+}
+
+.p:nth-child(3) {
+  animation: var(--effect) .25s;
+}
+
+.p:nth-child(4) {
+  animation: var(--effect) .375s;
+}
+
+.p:nth-child(5) {
+  animation: var(--effect) .5s;
+}
+
+.p:nth-child(6) {
+  animation: var(--effect) .675s;
+}
+
+.p:nth-child(7) {
+  animation: var(--effect) .75s;
+}
+
+@keyframes hover {
+  0% {
+    transform: scale(.5);
+    color: #ffffff;
+    -webkit-text-stroke: 2px gray;
+  }
+
+  20% {
+    transform: scale(1);
+    /* color: ; */
+    color: blue;
+    -webkit-text-stroke: 3px rgb(85, 105, 255);
+    /* filter: drop-shadow(0 0 1px rgb(255, 255, 255))drop-shadow(0 0 1px rgb(255, 255, 255))drop-shadow(0 0 3px rgb(0, 34, 255))drop-shadow(0 0 5px rgb(51, 0, 255))hue-rotate(10turn); */
+  }
+
+  50% {
+    transform: scale(.5);
+    color: #ffffff;
+    -webkit-text-stroke: 2px gray;
+  }
+
+
+}
+
+#menuandprofile{
+  display: flex;
+  justify-content: space-between;
+  width: 7%;
+}
+
+#aboutbody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  #menuandprofile{width: 30%;}
+  .wrapper ul li a{font-size: 22px;}
+  #aboutbody{padding: 10%;}
+}
